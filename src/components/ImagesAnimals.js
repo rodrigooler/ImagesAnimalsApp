@@ -14,7 +14,7 @@ import images from '../data/images';
 export default class ImagesAnimals extends Component {
   state = {
     index: 0,
-    imageWidth: null
+    imageWidth: null,
   };
 
   nextImage = (event) => {
@@ -26,13 +26,13 @@ export default class ImagesAnimals extends Component {
     if (newIndex < 0) newIndex = images.length - Math.abs(newIndex);
 
     this.setState({
-      index: newIndex
+      index: newIndex,
     });
   };
 
   onImageLayout = (event) => {
     this.setState({
-      imageWidth: event.nativeEvent.layout.width
+      imageWidth: event.nativeEvent.layout.width,
     });
   };
 
@@ -65,15 +65,15 @@ const styles = StyleSheet.create({
     flex: 2,
     width: 500,
     justifyContent: 'flex-end',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   imageLabel: {
     textAlign: 'center',
     backgroundColor: 'rgba(76, 178, 212, 1)',
     color: '#FFF',
-    width: 320
+    width: 320,
   },
   empty: {
-    flex: 1
+    flex: 1,
   }
 });
